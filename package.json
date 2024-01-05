@@ -1,0 +1,19 @@
+{
+  "name": "FAQ-Accordion_FrontendMentor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Szeri323/FAQ-Accordion_FrontendMentor.git"
+  },
+  "author": "Szeri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Szeri323/FAQ-Accordion_FrontendMentor/issues"
+  },
+  "homepage": "https://github.com/Szeri323/FAQ-Accordion_FrontendMentor#readme"
+}
