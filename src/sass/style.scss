@@ -1,0 +1,207 @@
+/* Colors */
+
+$color-white: hsl(0, 0%, 100%);
+$color-lightPink: hsl(275, 100%, 97%);
+$color-grayishPurple: hsl(292, 16%, 49%);
+$color-darkPurple: hsl(292, 42%, 14%);
+$color-Pink: hsl(281, 83%, 54%);
+
+/* Fonts */
+// FontFamily
+$fontFamily: 'Work Sans', sans-serif;
+// FontSize
+$fontSizeXL: 1.8rem;
+$fontSizeL: 1.6rem;
+$fontSizeM: 1.4rem;
+$fontSizeS: 1.2rem;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url(../img/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $color-lightPink;
+    font-family: $fontFamily;
+}
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.card {
+    max-width: 33rem;
+    padding: 2.4rem;
+    border-radius: 0.8rem;
+    background-color: $color-white;
+
+    .header {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            padding-left: 2.4rem;
+            font-weight: bold;
+            font-size: 32px;
+            color: $color-darkPurple;
+        }
+
+        img {
+            padding: 0;
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+
+    .accordions {
+        margin-top: 2.4em;
+
+        .accordions__item {
+            border-bottom: 1px solid $color-lightPink;
+            padding: 2rem 0;
+
+            &:last-of-type {
+                border: none
+            }
+
+            &:focus {
+                border: 1px solid $color-darkPurple
+            }
+
+            &:first-of-type {
+                padding-top: 0;
+                padding-bottom: 2rem;
+            }
+
+            &:last-of-type {
+                padding-bottom: 0;
+            }
+
+            .accordions__item-header {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+
+                .accordions__item-title {
+                    padding-right: 2.4rem;
+                    color: $color-darkPurple;
+                    font-weight: 600;
+                    font-size: 1.6rem;
+
+                    &:hover {
+                        color: $color-Pink;
+                    }
+
+                }
+
+                .accordions__item-icon {
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+
+            .accordions__item-content {
+                max-height: 0;
+                color: $color-grayishPurple;
+                overflow: hidden;
+                font-size: 1.4rem;
+                line-height: 1.46em;
+            }
+
+            .showAnimation {
+                animation: showingParagraph 1s forwards;
+                padding-top: 2.4rem;
+            }
+
+            .hideAnimation {
+                animation: hidingParagraph .5s forwards;
+            }
+        }
+
+    }
+}
+
+@keyframes showingParagraph {
+    from {
+        max-height: 0;
+    }
+
+    to {
+        max-height: 33rem;
+    }
+}
+
+@keyframes hidingParagraph {
+    from {
+        max-height: 33rem;
+        padding-top: 2.4rem;
+    }
+
+    to {
+        max-height: 0;
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        background-image: url(../img/background-pattern-desktop.svg);
+    }
+
+    .card {
+        max-width: 60rem;
+        padding: 4rem;
+        border-radius: 1.6rem;
+
+
+        .header {
+
+            h2 {
+                font-size: 56px;
+            }
+
+            img {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+
+        .accordions {
+            margin-top: 3.2rem;
+
+            .accordions__item {
+                padding: 2.4rem 0;
+
+                .accordions__item-header {
+                    font-size: 1.8rem;
+                }
+
+                .accordions__item-content {
+                    font-size: 1.6rem;
+                }
+            }
+
+        }
+    }
+}
