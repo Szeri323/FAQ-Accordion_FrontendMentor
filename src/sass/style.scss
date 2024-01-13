@@ -194,7 +194,10 @@ body {
                 padding: 2.4rem 0;
 
                 .accordions__item-header {
-                    font-size: 1.8rem;
+
+                    .accordions__item-title {
+                        font-size: 1.8rem;
+                    }
                 }
 
                 .accordions__item-content {
