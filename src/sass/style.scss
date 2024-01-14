@@ -5,6 +5,7 @@ $color-lightPink: hsl(275, 100%, 97%);
 $color-grayishPurple: hsl(292, 16%, 49%);
 $color-darkPurple: hsl(292, 42%, 14%);
 $color-Pink: hsl(281, 83%, 54%);
+$color-transparentPurple: hsla(281, 100%, 23%, 0.10);
 
 /* Fonts */
 // FontFamily
@@ -53,6 +54,7 @@ body {
     padding: 2.4rem;
     border-radius: 0.8rem;
     background-color: $color-white;
+    box-shadow: 0 32px 56px $color-transparentPurple;
 
     .header {
         display: flex;
@@ -196,6 +198,7 @@ body {
                 .accordions__item-header {
 
                     .accordions__item-title {
+                        padding: 0;
                         font-size: 1.8rem;
                     }
                 }
