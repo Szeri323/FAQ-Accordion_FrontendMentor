@@ -49,7 +49,7 @@ Users should be able to:
 ### Links
 
 - Live Site URL: [Github hosting](https://szeri323.github.io/projects/others/frontendmentor/4.FAQAccordion/faq-accordion.html)
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor soultion page](https://www.frontendmentor.io/solutions/faq-accordion-gulp-sassscss-accessibility-Xz93IYYDqu)
 
 ## My process
 
